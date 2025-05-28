@@ -1,4 +1,5 @@
 const balloonContainer = document.getElementById("balloon-container");
+const card = document.getElementById("card");
 
 function random(num) {
   return Math.floor(Math.random() * num);
@@ -16,7 +17,7 @@ function getRandomStyles() {
   color: rgba(${r},${g},${b},0.9); 
   box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
   margin: ${mt}px 0 0 ${ml}px;
-  animation: float ${dur}s ease-in infinite
+  animation: float ${dur}s ease-in forwards
   `;
 }
 
@@ -29,17 +30,7 @@ function createBalloons(num) {
   }
 }
 
-function removeBalloons() {
-  balloonContainer.style.opacity = 0;
-  setTimeout(() => {
-    balloonContainer.remove()
-  }, 500)
-}
-
-window.addEventListener("click", () => {
-  createBalloons(5)
-}, {once: true});
-
-window.addEventListener("", () => {
-  removeBalloons();
+card.addEventListener("mouseenter", () => {
+  createBalloons(10)
 });
+
