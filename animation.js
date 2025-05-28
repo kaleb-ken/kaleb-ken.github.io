@@ -30,7 +30,7 @@ function createBalloons(num) {
   }
 }
 
-card.addEventListener("mouseenter", () => {
+card.addEventListener("mousehover", () => {
   createBalloons(10)
 });
 
