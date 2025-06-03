@@ -10,7 +10,8 @@ body{
     margin: 0;
     padding: 0;
     display: block;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
+    
 }
 
 /* Card animation styling */
@@ -62,6 +63,100 @@ body{
 }
 .card:hover .outer {
     transform: rotateY(-130deg);
+}
+/* Front of card styling */
+
+.outer-front p{
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #000000;
+}
+
+.present {
+  display: flex;
+  height: 50%;
+}
+/* Gift bow styling */
+.bow{
+  z-index: 1;
+  height: 100%;
+}
+.bow::before, .bow::after{
+  content: "";
+  width: 53.3333333333px;
+  height: 53.3333333333px;
+  border: 2px solid black;
+  border-radius: 50% 50% 0 50%;
+  position: absolute;
+  bottom: 49%;
+  z-index: -1;
+}
+.bow::before {
+  left: 49%;
+  -webkit-transform: translateX(-100%) skew(10deg, 10deg);
+          transform: translateX(-100%) skew(10deg, 10deg);
+}
+.bow::after {
+  left: 51%;
+  -webkit-transform: translateX(0%) rotate(90deg) skew(10deg, 10deg);
+          transform: translateX(0%) rotate(90deg) skew(10deg, 10deg);
+}
+
+/* Gift box lid */
+.lid{
+  border: 2px solid black;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 40%;
+  height: 30px;
+  background-color: #228B22;
+  width: 180px;
+  border-radius: 5%;
+  box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.3);
+}
+
+.lid::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  background: white;
+}
+
+/* Gift box styling */
+.box{
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  height: 150px;
+  width: 175px;
+  margin-top: 123.3333333333px;
+  background-color: #228B22;
+  border: black solid 2px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+}
+.box::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  background: white;
 }
 
 /* Balloon animation styling */
