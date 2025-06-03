@@ -91,7 +91,7 @@ body{
   border: 2px solid black;
   border-radius: 50% 50% 0 50%;
   position: absolute;
-  bottom: 49%;
+  bottom: 55%;
   z-index: -1;
 }
 .bow::before {
@@ -113,7 +113,7 @@ body{
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: 40%;
+  bottom: 46%;
   height: 30px;
   background-color: #228B22;
   width: 180px;
@@ -136,7 +136,7 @@ body{
 /* Gift box styling */
 .box{
   position: absolute;
-  top: 25%;
+  top: 19%;
   left: 20%;
   height: 150px;
   width: 175px;
